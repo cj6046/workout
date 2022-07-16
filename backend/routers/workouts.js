@@ -6,7 +6,7 @@ const router = express.Router();
 
 // REQUEST HANDLERS
 // Get all workouts
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   res.json({ mssg: "Get all workouts" });
 });
 
@@ -16,7 +16,7 @@ router.get("/:id", (req, res) => {
 });
 
 // Create a new workout
-router.post("/create", (req, res) => {
+router.post("/", (req, res) => {
   res.json({ mssg: "Create a workout" });
 });
 
