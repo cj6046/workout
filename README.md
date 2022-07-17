@@ -14,6 +14,6 @@ Reach Features:
 
 # Technology Being Used
 
-For this project, I have chosen to go with a MERN stack (MongoDB, Express, React, Node.js). This was a fairly arbitrary decision as I wanted to practice with the MERN stack. My hope is to learn the ins-and-outs of MERN so that I can compare with other popular stacks and be able to better understand the pros and cons of various technologies.
+For this project, I have chosen to go with a MERN stack (MongoDB, Express, React, Node.js). This was a fairly arbitrary decision as I wanted to practice with the MERN stack. My hope is to learn the ins-and-outs of MERN so that I can compare with other popular stacks and be able to better understand the pros and cons of various technologies. So, expect some other simple apps utilizing various stacks soon!
 
-So, expect some other simple apps utilizing various stacks soon!
+Also, I am attempting to over-engineer this app a bit in order to learn other devOps tools such as Docker. As you will see, there is a Dockerfile in the repo, which I hope to eventually use to dockerize the full app once it is in a running state. Then, I can create a dev environment to support a CI/CD pipeline. Not sure how much of this I will get through, but I think it is an important part of my learning.
