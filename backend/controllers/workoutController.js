@@ -38,6 +38,25 @@ const createWorkout = async (req, res) => {
   // Define vars for incoming body
   const { title, reps, load } = req.body;
 
+  // Check for empty fields in creation
+  let emptyFields = [];
+
+  if (!title) {
+    emptyFields.push("title");
+  }
+  if (!reps) {
+    emptyFields.push("reps");
+  }
+  if (!load) {
+    emptyFields.push("load");
+  }
+  if (emptyFields.length > 0) {
+    return res.status(404).json({
+      error: "Please fill in all the fields",
+      emptyFields,
+    });
+  }
+
   // Try/Catch T: Create document based on workoutModel
   try {
     const workout = await workoutModel.create({ title, reps, load });
