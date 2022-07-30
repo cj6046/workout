@@ -1,20 +1,21 @@
-version:
+version: "3.8"
 
 services:
   backend:
-    image: workouts-back
-    build: 
+    build: ./backend
+    environment:
+      - MONGO_URI=${MONGO_URI}
     ports:
-      -4000:4000
-  mongodb: 
+      - 4000:4000
+  mongodb:
     image: mongo:latest
     environment:
-            - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER}
-            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
-            - MONGO_INITDB_DATABASE=workouts
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
+      - MONGO_INITDB_DATABASE=workouts
     ports:
-      -27017:27017
+      - 27017:27017
   frontend:
-    image:
+    build: ./frontend
     ports:
-      -3000:3000
+      - 3000:3000

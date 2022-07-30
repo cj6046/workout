@@ -1,6 +1,8 @@
+# environment
+/.env
+
 # BACKEND
 backend/node_modules
-backend/.env
 backend/.dockerignore
 
 # FRONTEND

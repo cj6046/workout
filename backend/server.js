@@ -1,5 +1,5 @@
 // requirements
-require("dotenv").config();
+require("dotenv").config({path: "../.env"});
 const mongoose = require("mongoose");
 const express = require("express");
 const workoutRouter = require("./routers/workoutRouter");
